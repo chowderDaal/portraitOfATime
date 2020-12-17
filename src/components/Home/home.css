@@ -1,0 +1,12 @@
+.Home .spaceEvenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Home .centerVertically {
+  align-items: center;
+}
+
+.Home .dayCardHeight {
+  height: 80vh;
+}

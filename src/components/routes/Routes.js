@@ -1,9 +1,9 @@
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from '../Home/Home';
 
 const Routes=()=> {
     return (
-    <div className="Router">
+    <div className="Routes " >
       <Router>
       <Route path="/" component={Home} />
       </Router>

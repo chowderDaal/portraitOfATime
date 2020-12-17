@@ -3,10 +3,11 @@
   justify-content: space-evenly;
 }
 
-.Home .centerVertically {
-  align-items: center;
+.Home .fullHeight {
+  height: 100vh;
 }
 
-.Home .dayCardHeight {
-  height: 80vh;
+.Home .centerVertically {
+  display: flex;
+  align-items: center;
 }

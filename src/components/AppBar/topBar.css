@@ -1,0 +1,8 @@
+.TopBar .spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.TopBar .noBoxShadow {
+  box-shadow: none !important;
+}

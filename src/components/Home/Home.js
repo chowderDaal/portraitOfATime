@@ -2,6 +2,8 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import {useState} from 'react';
 import DayCard from '../DayCard/DayCard';
+import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
+import TopBar from '../AppBar/TopBar'
 import './home.css';
 
 const Home=()=> {
@@ -24,18 +26,23 @@ const Home=()=> {
     },
   ]);
   return (
-    <Paper elevation={0} className="Home fullHeight">
-        <div className="centerVertically fullHeight">
-        <Grid container spacing={0} className="spaceEvenly" >
-            {cardsInView.map(card =>
-              <Grid item xs={12} lg={3} key={card.date}>
-                    <DayCard date={card.date} primaryColor={card.primaryColor} secondaryColor={card.secondaryColor}/>
-               </Grid>
-            )}
-        </Grid>
-        </div>
 
+    <Paper elevation={0} className="Home fullHeight">
+        <TopBar/>
+      <div className=" fullHeight centerVertically">
+        <Grid container spacing={0}>
+          <Grid item xs={12} lg={12} className="spaceEvenly">
+            {cardsInView.map(card =>
+            <Grid item xs={12} lg={3} key={card.date}>
+                   <DayCard date={card.date} primaryColor={card.primaryColor} secondaryColor={card.secondaryColor}/>
+            </Grid>
+            )}  
+          </Grid>
+
+        </Grid>
+       </div>
     </Paper>
+
   );
 }
 export default Home;

@@ -2,12 +2,27 @@
   height: 80vh;
 }
 
-.DayCard .gradientBackgroud {
-  background-color: #4158d0;
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
-  );
+.DayCard .cardBackgroundAnimation {
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.DayCard .centerHorizontally {
+  display: flex;
+  justify-content: center;
+}
+
+.DayCard .dayCardPadding {
+  padding: 3%;
 }

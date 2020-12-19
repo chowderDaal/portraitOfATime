@@ -6,8 +6,7 @@ import './dayCard.css'
 const DayCard=(props)=> {
   const [displayDate, setDisplayDate]=useState(props.date);
   const [gradientStyle, setGradientStyle]=useState({
-    backgroundImage: "linear-gradient(45deg,"+props.primaryColor+","+props.secondaryColor+")",
-    backgroundSize: "100% 100%"
+    backgroundImage: "linear-gradient(45deg,"+props.primaryColor+","+props.secondaryColor+")"
   });
 
   const convertDateFormat=(argDate)=>{

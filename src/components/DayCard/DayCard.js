@@ -24,8 +24,8 @@ const DayCard=(props)=> {
 
   console.log(gradientStyle.backgroundImage);
   return (
-        <div className="DayCard">
-            <Paper elevation={6} className="dayCardHeight centerHorizontally dayCardPadding" style={gradientStyle}>
+        <div className="DayCard ">
+            <Paper elevation={6} className="dayCardHeight centerHorizontally dayCardPadding grow" style={gradientStyle}>
                 <Typography variant="h5" className="centerHorizontally">
                     {convertDateFormat(displayDate)}
                 </Typography>

@@ -26,3 +26,11 @@
 .DayCard .dayCardPadding {
   padding: 3%;
 }
+
+.DayCard .grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.DayCard .grow:hover {
+  transform: scale(1.02);
+}

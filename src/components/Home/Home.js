@@ -2,7 +2,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import {useState} from 'react';
 import DayCard from '../DayCard/DayCard';
-import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import TopBar from '../AppBar/TopBar'
 import './home.css';
 

@@ -1,0 +1,25 @@
+.EntryField .fullWidth {
+  width: 100% !important;
+}
+
+.EntryField .textFieldWidth {
+  width: 84%;
+}
+
+.EntryField .verticalPadding {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.EntryField .addIconPadding {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+}
+
+.EntryField .growIcon {
+  transition: all 0.2s ease-in-out;
+}
+.DayCard .growIcon:hover {
+  transform: scale(1.1);
+}

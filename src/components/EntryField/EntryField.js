@@ -42,8 +42,8 @@ const EntryField = () => {
           name="newNotes"
           className="textFieldWidth"
           margin="dense"
-          placeholder="New Entry"
-          multiline="true"
+          placeholder="New Note"
+          multiline={true}
         />
       )}
 

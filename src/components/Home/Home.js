@@ -11,18 +11,70 @@ const Home = () => {
       date: new Date(Date.now() - 864e5),
       primaryColor: "#7b4397",
       secondaryColor: "#dc2430",
+      entries: [],
     },
     {
       date: new Date(),
       primaryColor: "#5A3F37",
       secondaryColor: "#2C7744",
+      entries: [
+        {
+          type: "Task",
+          content: "#1 This is a task.",
+        },
+        {
+          type: "Note",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas ultricies neque, eget ullamcorper velit fringilla ac. Nullam cursus mi at fermentum lacinia. Morbi non vulputate nibh. Vivamus volutpat pharetra mattis. Phasellus ex velit, porttitor sit amet mi non, placerat pharetra ex. Etiam nec viverra lectus. Morbi vulputate non quam.",
+        },
+        {
+          type: "Task",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus.",
+        },
+        {
+          type: "Note",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt eros suscipit erat malesuada tempus.",
+        },
+        {
+          type: "Task",
+          content: "#2 This is a task.",
+        },
+      ],
     },
     {
       date: new Date(Date.now() + 864e5),
       primaryColor: "#D1913C",
       secondaryColor: "#FFD194",
+      entries: [
+        {
+          type: "Task",
+          content: "#1 This is a task.",
+        },
+        {
+          type: "Note",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas ultricies neque, eget ullamcorper velit fringilla ac. Nullam cursus mi at fermentum lacinia. Morbi non vulputate nibh. Vivamus volutpat pharetra mattis. Phasellus ex velit, porttitor sit amet mi non, placerat pharetra ex. Etiam nec viverra lectus. Morbi vulputate non quam.",
+        },
+        {
+          type: "Task",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus.",
+        },
+        {
+          type: "Note",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt eros suscipit erat malesuada tempus.",
+        },
+        {
+          type: "Task",
+          content: "#2 This is a task.",
+        },
+      ],
     },
   ]);
+
   return (
     <Paper elevation={0} className="Home noBorderRadius">
       <TopBar />
@@ -35,6 +87,7 @@ const Home = () => {
                   date={card.date}
                   primaryColor={card.primaryColor}
                   secondaryColor={card.secondaryColor}
+                  entries={card.entries}
                 />
               </Grid>
             ))}

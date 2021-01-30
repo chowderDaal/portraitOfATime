@@ -2,6 +2,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { useState } from "react";
 import EntryField from "../EntryField/EntryField";
+import Entry from "../Entry/Entry";
 import Grid from "@material-ui/core/Grid";
 import "./dayCard.css";
 
@@ -50,10 +51,10 @@ const DayCard = (props) => {
             </Typography>
           </Grid>
           <Grid item xs={12} lg={12}>
-            <EntryField />
+            <EntryField date={displayDate} />
           </Grid>
           <Grid item xs={12} lg={12}>
-            This is a random Entry
+            <Entry entries={props.entries} />
           </Grid>
         </Grid>
       </Paper>

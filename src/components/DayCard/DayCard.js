@@ -54,7 +54,11 @@ const DayCard = (props) => {
             <EntryField date={displayDate} />
           </Grid>
           <Grid item xs={12} lg={12}>
-            <Entry entries={props.entries} />
+            <Entry
+              entries={props.entries}
+              handleCheckboxChange={props.handleCheckboxChange}
+              dayIndex={props.dayIndex}
+            />
           </Grid>
         </Grid>
       </Paper>

@@ -20,6 +20,7 @@ const Home = () => {
       entries: [
         {
           type: "Task",
+          complete: true,
           content: "#1 This is a task.",
         },
         {
@@ -29,6 +30,7 @@ const Home = () => {
         },
         {
           type: "Task",
+          complete: false,
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus.",
         },
@@ -39,6 +41,7 @@ const Home = () => {
         },
         {
           type: "Task",
+          complete: true,
           content: "#2 This is a task.",
         },
       ],
@@ -50,6 +53,7 @@ const Home = () => {
       entries: [
         {
           type: "Task",
+          complete: false,
           content: "#1 This is a task.",
         },
         {
@@ -59,6 +63,7 @@ const Home = () => {
         },
         {
           type: "Task",
+          complete: true,
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus.",
         },
@@ -69,11 +74,22 @@ const Home = () => {
         },
         {
           type: "Task",
-          content: "#2 This is a task.",
+          complete: false,
+          content:
+            "#2 This is a task. askjdh sdfksdfj dsfklsdjflsd sdlfkjsdlkfj sdlkfjsdlkjf sldkfjsdlkjf",
         },
       ],
     },
   ]);
+
+  const handleCheckboxChange = (dayIndex, entryIndex) => {
+    let tmpCardsInView = [...cardsInView];
+    tmpCardsInView[dayIndex].entries[entryIndex].complete = !tmpCardsInView[
+      dayIndex
+    ].entries[entryIndex].complete;
+
+    setCardsInView([...tmpCardsInView]);
+  };
 
   return (
     <Paper elevation={0} className="Home noBorderRadius">
@@ -81,13 +97,15 @@ const Home = () => {
       <div className=" fullHeight centerVertically">
         <Grid container spacing={0}>
           <Grid item xs={12} lg={12} className="spaceEvenly">
-            {cardsInView.map((card) => (
+            {cardsInView.map((card, index) => (
               <Grid item xs={12} lg={3} key={card.date}>
                 <DayCard
                   date={card.date}
                   primaryColor={card.primaryColor}
                   secondaryColor={card.secondaryColor}
                   entries={card.entries}
+                  handleCheckboxChange={handleCheckboxChange}
+                  dayIndex={index}
                 />
               </Grid>
             ))}

@@ -1,0 +1,7 @@
+.TaskEntry .noLeftPadding {
+  padding-left: 0px;
+}
+
+.TaskEntry .taskCheckBox {
+  color: #fff !important;
+}

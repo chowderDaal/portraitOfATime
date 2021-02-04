@@ -2,7 +2,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { useState } from "react";
 import EntryField from "../EntryField/EntryField";
-import Entry from "../Entry/Entry";
+import Entries from "../Entries/Entries";
 import Grid from "@material-ui/core/Grid";
 import "./dayCard.css";
 
@@ -54,7 +54,7 @@ const DayCard = (props) => {
             <EntryField date={displayDate} />
           </Grid>
           <Grid item xs={12} lg={12}>
-            <Entry
+            <Entries
               entries={props.entries}
               handleCheckboxChange={props.handleCheckboxChange}
               dayIndex={props.dayIndex}

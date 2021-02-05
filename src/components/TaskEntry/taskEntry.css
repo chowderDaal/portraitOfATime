@@ -5,3 +5,8 @@
 .TaskEntry .taskCheckBox {
   color: #fff !important;
 }
+
+.TaskEntry .menuIcon {
+  float: right;
+  margin-top: 9px;
+}

@@ -1,4 +1,3 @@
-//TODO: figure out how to update the UI after child state is changed
 import TaskEntry from "../TaskEntry/TaskEntry";
 import NoteEntry from "../NoteEntry/NoteEntry";
 import NoEntries from "../NoEntries/NoEntries";

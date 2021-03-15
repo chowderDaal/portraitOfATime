@@ -15,8 +15,8 @@ const Home = () => {
     },
     {
       date: new Date(),
-      primaryColor: "#5A3F37",
-      secondaryColor: "#2C7744",
+      primaryColor: "#191654",
+      secondaryColor: "#43C6AC",
       entries: [
         {
           type: "Task",
@@ -96,7 +96,7 @@ const Home = () => {
       <TopBar />
       <div className=" fullHeight centerVertically">
         <Grid container spacing={0}>
-          <Grid item xs={12} lg={12} className="spaceEvenly">
+          <Grid item xs={12} lg={12} className="spaceEvenly flexWrap">
             {cardsInView.map((card, index) => (
               <Grid item xs={12} lg={3} key={card.date}>
                 <DayCard

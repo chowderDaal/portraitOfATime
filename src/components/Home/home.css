@@ -15,3 +15,7 @@
 .noBorderRadius {
   border-radius: 0px !important;
 }
+
+.Home .flexWrap{
+  flex-wrap:wrap;
+}

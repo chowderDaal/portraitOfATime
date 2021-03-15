@@ -2,3 +2,8 @@
   padding-top: 9px;
   padding-bottom: 9px;
 }
+
+.NoteEntry .menuIcon {
+  float: right;
+  margin-top: 9px;
+}

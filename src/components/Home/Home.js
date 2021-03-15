@@ -15,8 +15,8 @@ const Home = () => {
     },
     {
       date: new Date(),
-      primaryColor: "#5A3F37",
-      secondaryColor: "#2C7744",
+      primaryColor: "#191654",
+      secondaryColor: "#43C6AC",
       entries: [
         {
           type: "Task",

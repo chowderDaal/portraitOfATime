@@ -35,8 +35,8 @@ export default function TopBar() {
   };
 
   return (
-    <div className="TopBar">
-      <AppBar position="absolute" color="transparent" className="noBoxShadow">
+    <div className="TopBar fixedPosition">
+      <AppBar position="absolute" color="transparent" className="noBoxShadow glass fixedPosition">
         <Toolbar className="spaceBetween">
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />

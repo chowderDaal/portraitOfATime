@@ -2,7 +2,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { useState } from "react";
 import DayCard from "../DayCard/DayCard";
-import TopBar from "../AppBar/TopBar";
+import TopBar from "../TopBar/TopBar";
 import "./home.css";
 
 const Home = () => {
@@ -80,6 +80,7 @@ const Home = () => {
         },
       ],
     },
+
   ]);
 
   const handleCheckboxChange = (dayIndex, entryIndex) => {
@@ -94,7 +95,7 @@ const Home = () => {
   return (
     <Paper elevation={0} className="Home noBorderRadius">
       <TopBar />
-      <div className=" fullHeight centerVertically">
+      <div className=" fullHeight centerVertically flexWrap">
         <Grid container spacing={0}>
           <Grid item xs={12} lg={12} className="spaceEvenly flexWrap">
             {cardsInView.map((card, index) => (

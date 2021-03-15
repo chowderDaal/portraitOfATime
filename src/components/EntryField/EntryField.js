@@ -4,6 +4,7 @@ import MoreVertRoundedIcon from "@material-ui/icons/MoreVertRounded";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
+import Grid from "@material-ui/core/Grid";
 import "./entryField.css";
 
 const EntryField = () => {
@@ -26,46 +27,55 @@ const EntryField = () => {
 
   return (
     <div className="EntryField fullWidth">
-      {selectedOption === "Task" && (
-        <TextField
-          id="newTask"
-          name="newTask"
-          className="textFieldWidth"
-          margin="dense"
-          placeholder="New Task"
-        />
-      )}
+      <Grid container spacing={0} >
 
-      {selectedOption === "Note" && (
-        <TextField
-          id="newNote"
-          name="newNotes"
-          className="textFieldWidth"
-          margin="dense"
-          placeholder="New Note"
-          multiline={true}
-        />
-      )}
+        <Grid item xs={10} lg={10} >
+          {selectedOption === "Task" && (
+            <TextField
+              id="newTask"
+              name="newTask"
+              margin="dense"
+              fullWidth
+              placeholder="New Task"
+            />
+          )}
 
-      <MoreVertRoundedIcon
-        className="verticalPadding growIcon"
-        aria-controls="entry-menu"
-        onClick={openMenu}
-      />
-      <Menu
-        id="entry-menu"
-        anchorEl={menu}
-        keepMounted
-        open={Boolean(menu)}
-        onClose={closeMenu}>
-        {menuOptions.map((item) => (
-          <MenuItem key={item} onClick={() => selectMenuItem(item)}>
-            {item}
-          </MenuItem>
-        ))}
-      </Menu>
+          {selectedOption === "Note" && (
+            <TextField
+              id="newNote"
+              name="newNotes"
+              margin="dense"
+              placeholder="New Note"
+              fullWidth
+              multiline={true}
+            />
+          )}
+        </Grid>
 
-      <AddRoundedIcon className="addIconPadding growIcon" />
+        <Grid item xs={1} lg={1} >
+          <MoreVertRoundedIcon
+            className="padding7 growIcon"
+            aria-controls="entry-menu"
+            onClick={openMenu}
+          />
+          <Menu
+            id="entry-menu"
+            anchorEl={menu}
+            keepMounted
+            open={Boolean(menu)}
+            onClose={closeMenu}>
+            {menuOptions.map((item) => (
+              <MenuItem key={item} onClick={() => selectMenuItem(item)}>
+                {item}
+              </MenuItem>
+            ))}
+          </Menu>
+        </Grid>
+
+        <Grid item xs={1} lg={1} >
+          <AddRoundedIcon className="padding7 growIcon" />
+        </Grid>
+      </Grid>
     </div>
   );
 };

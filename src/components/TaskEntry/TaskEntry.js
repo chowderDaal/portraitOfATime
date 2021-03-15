@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -21,8 +21,8 @@ const TaskEntry = (props) => {
     setMenuOpen(event.currentTarget);
   };
   return (
-    <Fragment>
-      <Grid container spacing={0} className="TaskEntry">
+    <div className="TaskEntry">
+      <Grid container spacing={0} >
         <Grid item xs={1} lg={1} >
           <Checkbox
             className="noLeftPadding taskCheckBox"
@@ -33,9 +33,8 @@ const TaskEntry = (props) => {
             }
           />
         </Grid>
-
         <Grid item xs={10} lg={10} >
-          <Typography variant="body2" gutterBottom>
+          <Typography variant="body2" gutterBottom className="textTopMargin">
             {props.content}
           </Typography>
         </Grid>
@@ -58,7 +57,7 @@ const TaskEntry = (props) => {
       </Grid>
 
       <Divider variant="middle" />
-    </Fragment>
+    </div>
   );
 };
 export default TaskEntry;

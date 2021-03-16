@@ -1,14 +1,14 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import { ReactComponent as ReactLogo } from '../../assets/homeLogo.svg';
-import './topBar.css';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+import DateRangeRoundedIcon from "@material-ui/icons/DateRangeRounded";
+import { ReactComponent as ReactLogo } from "../../assets/homeLogo.svg";
+import "./topBar.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,13 +36,17 @@ export default function TopBar() {
 
   return (
     <div className="TopBar fixedPosition">
-      <AppBar position="absolute" color="transparent" className="noBoxShadow glass fixedPosition">
-        <Toolbar className="spaceBetween">
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
+      <AppBar color="transparent" className="noBoxShadow glass fixedPosition">
+        <Toolbar variant="dense" className="spaceBetween">
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu">
+            <DateRangeRoundedIcon />
           </IconButton>
           <div>
-            <ReactLogo width="150px" />
+            <ReactLogo height="50px" width="100px" />
           </div>
           <div>
             <IconButton
@@ -50,25 +54,23 @@ export default function TopBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleMenu}
-              color="inherit"
-            >
+              color="inherit">
               <AccountCircle />
             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorEl}
               anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               open={open}
-              onClose={handleClose}
-            >
+              onClose={handleClose}>
               <MenuItem onClick={handleClose}>Profile</MenuItem>
               <MenuItem onClick={handleClose}>My account</MenuItem>
             </Menu>

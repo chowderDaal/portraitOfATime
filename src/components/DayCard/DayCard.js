@@ -1,7 +1,6 @@
-//Todo: figure out layout for entry
+import React, { useState } from "react";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import { useState } from "react";
 import EntryField from "../EntryField/EntryField";
 import Entries from "../Entries/Entries";
 import Grid from "@material-ui/core/Grid";
@@ -39,8 +38,15 @@ const DayCard = (props) => {
     return month + " " + dayNumber + ", " + year;
   };
 
+  const generateDateId = (argDate) => {
+    let month = argDate.getMonth() + 1;
+    let dayNumber = argDate.getDate();
+    let year = argDate.getFullYear();
+    return month + "-" + dayNumber + "-" + year + "dayCard";
+  };
+
   return (
-    <div className="DayCard">
+    <div className="DayCard" id={props.dayCardId}>
       <Paper
         elevation={6}
         className="dayCardHeight centerHorizontally dayCardPadding overFlowYAuto"

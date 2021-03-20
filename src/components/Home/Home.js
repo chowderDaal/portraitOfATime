@@ -1,20 +1,29 @@
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import DayCard from "../DayCard/DayCard";
 import TopBar from "../TopBar/TopBar";
 import "./home.css";
 
 const Home = () => {
+  const generateDateId = (argDate) => {
+    let month = argDate.getMonth() + 1;
+    let dayNumber = argDate.getDate();
+    let year = argDate.getFullYear();
+    return month + "-" + dayNumber + "-" + year + "dayCard";
+  };
+
   const [cardsInView, setCardsInView] = useState([
     {
       date: new Date(Date.now() - 864e5),
+      dayCardId: generateDateId(new Date(Date.now() - 864e5)),
       primaryColor: "#7b4397",
       secondaryColor: "#dc2430",
       entries: [],
     },
     {
       date: new Date(),
+      dayCardId: generateDateId(new Date()),
       primaryColor: "#191654",
       secondaryColor: "#43C6AC",
       entries: [
@@ -48,6 +57,7 @@ const Home = () => {
     },
     {
       date: new Date(Date.now() + 864e5),
+      dayCardId: generateDateId(new Date(Date.now() + 864e5)),
       primaryColor: "#D1913C",
       secondaryColor: "#FFD194",
       entries: [
@@ -80,7 +90,6 @@ const Home = () => {
         },
       ],
     },
-
   ]);
 
   const handleCheckboxChange = (dayIndex, entryIndex) => {
@@ -92,15 +101,23 @@ const Home = () => {
     setCardsInView([...tmpCardsInView]);
   };
 
+  useEffect(() => {
+    let scrollDiv = document.getElementById("3-19-2021dayCard").offsetTop;
+    window.scrollTo({ top: scrollDiv - 54, behavior: "smooth" });
+  }, []);
+
   return (
     <Paper elevation={0} className="Home noBorderRadius">
       <TopBar />
-      <div className=" fullHeight centerVertically flexWrap">
+      <div
+        className=" fullHeight centerVertically flexWrap"
+        id="dayCardContainer">
         <Grid container spacing={0}>
           <Grid item xs={12} lg={12} className="spaceEvenly flexWrap">
             {cardsInView.map((card, index) => (
               <Grid item xs={12} lg={3} key={card.date}>
                 <DayCard
+                  dayCardId={card.dayCardId}
                   date={card.date}
                   primaryColor={card.primaryColor}
                   secondaryColor={card.secondaryColor}

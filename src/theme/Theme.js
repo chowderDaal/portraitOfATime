@@ -4,5 +4,12 @@ const Theme = createMuiTheme({
   palette: {
     type: "dark",
   },
+  overrides: {
+    MuiButton: {
+      label: {
+        color: "#f1f1f1",
+      },
+    },
+  },
 });
 export default Theme;

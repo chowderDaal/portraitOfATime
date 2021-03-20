@@ -39,8 +39,15 @@ const DayCard = (props) => {
     return month + " " + dayNumber + ", " + year;
   };
 
+  const generateDateId = (argDate) => {
+    let month = argDate.getMonth() + 1;
+    let dayNumber = argDate.getDate();
+    let year = argDate.getFullYear();
+    return month + "-" + dayNumber + "-" + year + "dayCard";
+  };
+
   return (
-    <div className="DayCard">
+    <div className="DayCard" id={generateDateId(displayDate)}>
       <Paper
         elevation={6}
         className="dayCardHeight centerHorizontally dayCardPadding overFlowYAuto"

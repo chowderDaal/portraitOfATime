@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -8,22 +7,10 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import DateRangeRoundedIcon from "@material-ui/icons/DateRangeRounded";
 import { ReactComponent as ReactLogo } from "../../assets/homeLogo.svg";
+import TopBarDatePicker from "../TopBarDatePicker/TopBarDatePicker";
 import "./topBar.css";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
-
 export default function TopBar() {
-  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -38,13 +25,7 @@ export default function TopBar() {
     <div className="TopBar fixedPosition">
       <AppBar color="transparent" className="noBoxShadow glass fixedPosition">
         <Toolbar variant="dense" className="spaceBetween">
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu">
-            <DateRangeRoundedIcon />
-          </IconButton>
+          <TopBarDatePicker />
           <div>
             <ReactLogo height="50px" width="100px" />
           </div>

@@ -94,15 +94,16 @@ const Home = () => {
 
   const handleCheckboxChange = (dayIndex, entryIndex) => {
     let tmpCardsInView = [...cardsInView];
-    tmpCardsInView[dayIndex].entries[entryIndex].complete = !tmpCardsInView[
-      dayIndex
-    ].entries[entryIndex].complete;
+    tmpCardsInView[dayIndex].entries[entryIndex].complete =
+      !tmpCardsInView[dayIndex].entries[entryIndex].complete;
 
     setCardsInView([...tmpCardsInView]);
   };
 
   useEffect(() => {
-    let scrollDiv = document.getElementById("3-19-2021dayCard").offsetTop;
+    let scrollDiv = document.getElementById(
+      generateDateId(new Date())
+    ).offsetTop;
     window.scrollTo({ top: scrollDiv - 54, behavior: "smooth" });
   }, []);
 

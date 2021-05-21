@@ -10,8 +10,8 @@ const LandingPage = () => {
 
   return (
     <Paper elevation={0} className="LandingPage noBorderRadius">
-      <Grid xs={12} lg={12} className="">
-        <Grid container xs={12} lg={10}>
+      <Grid container xs={12} lg={12} className="centerHorizontally">
+        <Grid item xs={12} lg={9}>
           <Logo width="200px" />
         </Grid>
       </Grid>

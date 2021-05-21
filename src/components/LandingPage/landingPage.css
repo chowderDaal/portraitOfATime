@@ -1,3 +1,8 @@
 .noBorderRadius {
   border-radius: 0px !important;
 }
+
+.LandingPage .centerHorizontally {
+  display: flex;
+  justify-content: center;
+}

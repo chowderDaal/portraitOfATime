@@ -6,8 +6,8 @@ const Routes = () => {
   return (
     <div className="Routes ">
       <Router>
-        <Route path="/" component={LandingPage} />
-        <Route path="/home" component={Home} />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/home" component={Home} />
       </Router>
     </div>
   );

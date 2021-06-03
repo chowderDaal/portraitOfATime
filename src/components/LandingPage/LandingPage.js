@@ -9,6 +9,8 @@ import { ReactComponent as LandingPageSvg1 } from "../../assets/landingPage1.svg
 import { ReactComponent as LandingPageSvg2 } from "../../assets/landingPage2.svg";
 import { ReactComponent as LandingPageSvg3 } from "../../assets/landingPage3.svg";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import LandingPageHeader from "../LandingPageHeader/LandingPageHeader";
+import LandingContent from "../LandingPageContent/LandingPageContent";
 
 const LandingPage = () => {
   useEffect(() => {}, []);

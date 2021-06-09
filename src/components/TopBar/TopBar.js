@@ -6,7 +6,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import DateRangeRoundedIcon from "@material-ui/icons/DateRangeRounded";
-import { ReactComponent as ReactLogo } from "../../assets/homeLogo.svg";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
 import TopBarDatePicker from "../TopBarDatePicker/TopBarDatePicker";
 import "./topBar.css";
 
@@ -27,7 +27,7 @@ export default function TopBar() {
         <Toolbar variant="dense" className="spaceBetween">
           <TopBarDatePicker />
           <div>
-            <ReactLogo height="50px" width="100px" />
+            <Logo height="50px" width="100px" />
           </div>
           <div>
             <IconButton

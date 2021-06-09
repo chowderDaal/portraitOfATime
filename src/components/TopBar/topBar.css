@@ -1,0 +1,17 @@
+.TopBar .spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.TopBar .noBoxShadow {
+  box-shadow: none !important;
+}
+
+.TopBar .fixedPosition{
+  position:fixed;
+}
+
+.TopBar .glass {
+  backdrop-filter: brightness(150%)  blur(9px);
+}
+

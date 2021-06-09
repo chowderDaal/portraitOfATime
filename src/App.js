@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Routes from "./components/Routes/Routes";
+import { ThemeProvider } from "@material-ui/core/styles";
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
+import Theme from "./theme/Theme";
+import "./app.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={Theme}>
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <div className="App">
+          <Routes />
+        </div>
+      </MuiPickersUtilsProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

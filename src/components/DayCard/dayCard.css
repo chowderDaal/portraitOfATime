@@ -1,0 +1,53 @@
+.DayCard .dayCardHeight {
+  height: 80vh;
+}
+
+.DayCard .cardBackgroundAnimation {
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.DayCard .centerHorizontally {
+  display: flex;
+  justify-content: center;
+}
+
+.DayCard .fullWidth {
+  width: 100% !important;
+}
+
+.DayCard .dayCardPadding {
+  padding:  3%;
+}
+
+.DayCard .overFlowYAuto {
+  overflow-y: auto;
+}
+
+.DayCard ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.DayCard ::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+.DayCard ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.45);
+}

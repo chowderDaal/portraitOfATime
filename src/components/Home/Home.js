@@ -101,10 +101,10 @@ const Home = () => {
   };
 
   useEffect(() => {
-    let scrollDiv = document.getElementById(
+    /*     let scrollDiv = document.getElementById(
       generateDateId(new Date())
     ).offsetTop;
-    window.scrollTo({ top: scrollDiv - 54, behavior: "smooth" });
+    window.scrollTo({ top: scrollDiv - 54, behavior: "smooth" }); */
   }, []);
 
   return (
@@ -112,7 +112,8 @@ const Home = () => {
       <TopBar />
       <div
         className=" fullHeight centerVertically flexWrap"
-        id="dayCardContainer">
+        id="dayCardContainer"
+      >
         <Grid container spacing={0}>
           <Grid item xs={12} lg={12} className="spaceEvenly flexWrap">
             {cardsInView.map((card, index) => (

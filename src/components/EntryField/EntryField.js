@@ -27,9 +27,8 @@ const EntryField = () => {
 
   return (
     <div className="EntryField fullWidth">
-      <Grid container spacing={0} >
-
-        <Grid item xs={10} lg={10} >
+      <Grid container spacing={0}>
+        <Grid item xs={10} lg={10}>
           {selectedOption === "Task" && (
             <TextField
               id="newTask"
@@ -37,6 +36,7 @@ const EntryField = () => {
               margin="dense"
               fullWidth
               placeholder="New Task"
+              className="entryFieldFocus"
             />
           )}
 
@@ -48,11 +48,12 @@ const EntryField = () => {
               placeholder="New Note"
               fullWidth
               multiline={true}
+              className="entryFieldFocus"
             />
           )}
         </Grid>
 
-        <Grid item xs={1} lg={1} >
+        <Grid item xs={1} lg={1}>
           <MoreVertRoundedIcon
             className="padding7 growIcon"
             aria-controls="entry-menu"
@@ -72,7 +73,7 @@ const EntryField = () => {
           </Menu>
         </Grid>
 
-        <Grid item xs={1} lg={1} >
+        <Grid item xs={1} lg={1}>
           <AddRoundedIcon className="padding7 growIcon" />
         </Grid>
       </Grid>

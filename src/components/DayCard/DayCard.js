@@ -76,7 +76,6 @@ const DayCard = (props) => {
                 </Grid>
               </Paper>
             </div>
-            {provided.placeholder}
           </div>
         )}
       </Droppable>

@@ -20,7 +20,8 @@ const LandingPageCard = (props) => {
       <Paper
         elevation={6}
         className=" centerHorizontally dayCardPadding overFlowYAuto "
-        style={gradientStyle}>
+        style={gradientStyle}
+      >
         <Grid item xs={12} lg={12}>
           <Grid item xs={12} lg={12} className="centerHorizontally">
             <Typography variant="h5">Testing120</Typography>

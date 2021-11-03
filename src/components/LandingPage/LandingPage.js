@@ -1,7 +1,7 @@
 import React from "react";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Hidden from "@material-ui/core/Hidden";
 import "./landingPage.css";
 import LandingPageCard from "../LandingPageCard/LandingPageCard";
@@ -9,8 +9,6 @@ import { ReactComponent as LandingPageSvg1 } from "../../assets/landingPage1.svg
 import { ReactComponent as LandingPageSvg2 } from "../../assets/landingPage2.svg";
 import { ReactComponent as LandingPageSvg3 } from "../../assets/landingPage3.svg";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
-import LandingPageHeader from "../LandingPageHeader/LandingPageHeader";
-import LandingContent from "../LandingPageContent/LandingPageContent";
 
 const LandingPage = () => {
   useEffect(() => {}, []);
@@ -18,7 +16,8 @@ const LandingPage = () => {
   return (
     <Paper
       elevation={0}
-      className="LandingPage noBorderRadius centerHorizontally ">
+      className="LandingPage noBorderRadius centerHorizontally "
+    >
       <Grid
         container
         xs={11}
@@ -26,7 +25,8 @@ const LandingPage = () => {
         md={10}
         lg={10}
         xl={9}
-        className="centerHorizontally">
+        className="centerHorizontally"
+      >
         <Grid item xs={12} md={9} lg={9} className="headerMargin">
           <Logo width="200px" />
         </Grid>

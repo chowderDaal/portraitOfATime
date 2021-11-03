@@ -1,0 +1,55 @@
+.Login {
+  height: 100vh;
+  width: 100%;
+}
+
+.Login .paper-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: wrap;
+}
+
+.Login .login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login .login-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em;
+  background: linear-gradient(45deg, #243b55, #141e30);
+}
+
+.Login .login-btn {
+  background: linear-gradient(to left, #0052d4, #4364f7, #6fb1fc);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.Login .email-field {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.Login input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
+.Login .password-field {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.Login .sign-up-text {
+  font-size: 0.7rem;
+}

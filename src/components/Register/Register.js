@@ -4,10 +4,15 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { useHistory } from "react-router-dom";
 
 import "./register.css";
 
 const Register = () => {
+  const history = useHistory();
+  const goToLogin = () => {
+    history.push("/login");
+  };
   return (
     <div className="Register">
       <Paper className="paper-container">
@@ -38,6 +43,13 @@ const Register = () => {
                 className="password-field"
                 type="password"
               />
+              <TextField
+                margin="dense"
+                fullWidth
+                placeholder="Confirm Password"
+                className="confirm-password-field"
+                type="password"
+              />
               <Button
                 variant="contained"
                 fullWidth
@@ -47,8 +59,12 @@ const Register = () => {
                 Register
               </Button>
 
-              <Button color="primary" className="sign-up-text">
-                Don't have an account? sign up here
+              <Button
+                color="primary"
+                className="sign-up-text"
+                onClick={goToLogin}
+              >
+                Already have an account? login in here
               </Button>
             </Paper>
           </Grid>

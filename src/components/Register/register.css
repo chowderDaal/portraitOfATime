@@ -24,11 +24,11 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 1em;
-  background: linear-gradient(45deg, #243b55, #141e30);
+  background: linear-gradient(45deg, #fdbb2d, #b21f1f, #1a2a6c);
 }
 
 .Register .register-btn {
-  background: linear-gradient(to left, #0052d4, #4364f7, #6fb1fc);
+  background: linear-gradient(to left, #fc4a1a, #f7b733);
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -51,6 +51,10 @@ select:-webkit-autofill {
 }
 
 .Register .password-field {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.Register .confirm-password-field {
   margin-top: 2em;
   margin-bottom: 2em;
 }

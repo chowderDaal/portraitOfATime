@@ -4,10 +4,15 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { useHistory } from "react-router-dom";
 
 import "./login.css";
 
 const Login = () => {
+  const history = useHistory();
+  const goToRegister = () => {
+    history.push("/register");
+  };
   return (
     <div className="Login">
       <Paper className="paper-container">
@@ -40,7 +45,11 @@ const Login = () => {
                 Login
               </Button>
 
-              <Button color="primary" className="sign-up-text">
+              <Button
+                color="primary"
+                className="sign-up-text"
+                onClick={goToRegister}
+              >
                 Don't have an account? sign up here
               </Button>
             </Paper>

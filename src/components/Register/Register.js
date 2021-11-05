@@ -6,22 +6,29 @@ import Button from "@material-ui/core/Button";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { useHistory } from "react-router-dom";
 
-import "./login.css";
+import "./register.css";
 
-const Login = () => {
+const Register = () => {
   const history = useHistory();
-  const goToRegister = () => {
-    history.push("/register");
+  const goToLogin = () => {
+    history.push("/login");
   };
   return (
-    <div className="Login">
+    <div className="Register">
       <Paper className="paper-container">
-        <Grid container spacing={0} className="login-container">
+        <Grid container spacing={0} className="register-container">
           <Grid item xs={10} md={4} lg={3} xl={2}>
-            <Paper elevation={6} className="login-section">
+            <Paper elevation={6} className="register-section">
               <div>
                 <Logo height="90px" width="140px" />
               </div>
+
+              <TextField
+                margin="dense"
+                fullWidth
+                placeholder="Name"
+                className="name-field"
+              />
               <TextField
                 margin="dense"
                 fullWidth
@@ -36,21 +43,28 @@ const Login = () => {
                 className="password-field"
                 type="password"
               />
+              <TextField
+                margin="dense"
+                fullWidth
+                placeholder="Confirm Password"
+                className="confirm-password-field"
+                type="password"
+              />
               <Button
                 variant="contained"
                 fullWidth
                 color="primary"
-                className="login-btn"
+                className="register-btn"
               >
-                Login
+                Register
               </Button>
 
               <Button
                 color="primary"
                 className="sign-up-text"
-                onClick={goToRegister}
+                onClick={goToLogin}
               >
-                Don't have an account? sign up here
+                Already have an account? login in here
               </Button>
             </Paper>
           </Grid>
@@ -59,4 +73,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default Register;

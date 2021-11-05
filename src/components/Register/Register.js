@@ -5,18 +5,25 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
-import "./login.css";
+import "./register.css";
 
-const Login = () => {
+const Register = () => {
   return (
-    <div className="Login">
+    <div className="Register">
       <Paper className="paper-container">
-        <Grid container spacing={0} className="login-container">
+        <Grid container spacing={0} className="register-container">
           <Grid item xs={10} md={4} lg={3} xl={2}>
-            <Paper elevation={6} className="login-section">
+            <Paper elevation={6} className="register-section">
               <div>
                 <Logo height="90px" width="140px" />
               </div>
+
+              <TextField
+                margin="dense"
+                fullWidth
+                placeholder="Name"
+                className="name-field"
+              />
               <TextField
                 margin="dense"
                 fullWidth
@@ -35,9 +42,9 @@ const Login = () => {
                 variant="contained"
                 fullWidth
                 color="primary"
-                className="login-btn"
+                className="register-btn"
               >
-                Login
+                Register
               </Button>
 
               <Button color="primary" className="sign-up-text">
@@ -50,4 +57,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default Register;

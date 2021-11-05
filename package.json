@@ -9,6 +9,7 @@
     "@material-ui/pickers": "^3.3.10",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "axios": "^0.24.0",
     "date-fns": "^2.19.0",
     "jest-dom": "^4.0.0",
     "react": "^16.0.2",
@@ -49,5 +50,6 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
     "file-loader": "^6.2.0"
-  }
+  },
+  "proxy": "https://portrait-api-dev.azurewebsites.net/api"
 }

@@ -21,7 +21,7 @@ const Login = () => {
     const login = { email: emailInput, password: passwordInput };
 
     axios
-      .post("/user/login", login)
+      .post(process.env.REACT_APP_API_BASE_URL + "/user/login", login)
       .then((res) => {
         console.log(res);
         console.log(res.data);

@@ -9,6 +9,8 @@ import { useState } from "react";
 import axios from "axios";
 import "./login.css";
 
+const configData = require("../../config.json");
+
 const Login = () => {
   const [emailInput, setEmail] = useState();
   const [passwordInput, setPassword] = useState();
@@ -21,7 +23,7 @@ const Login = () => {
     const login = { email: emailInput, password: passwordInput };
 
     axios
-      .post(process.env.REACT_APP_API_BASE_URL + "/user/login", login)
+      .post(configData.API_BASE_URL + "/user/login", login)
       .then((res) => {
         console.log(res);
         console.log(res.data);

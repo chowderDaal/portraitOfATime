@@ -2,17 +2,19 @@ import React from "react";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { useEffect } from "react";
-import Hidden from "@material-ui/core/Hidden";
-import "./landingPage.css";
-import LandingPageCard from "../LandingPageCard/LandingPageCard";
-import { ReactComponent as LandingPageSvg1 } from "../../assets/landingPage1.svg";
-import { ReactComponent as LandingPageSvg2 } from "../../assets/landingPage2.svg";
-import { ReactComponent as LandingPageSvg3 } from "../../assets/landingPage3.svg";
+import { useHistory } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import "./landingPage.css";
 
 const LandingPage = () => {
-  useEffect(() => {}, []);
-
+  const history = useHistory();
+  const goToLogin = () => {
+    history.push("/login");
+  };
+  const goToRegister = () => {
+    history.push("/register");
+  };
   return (
     <Paper
       elevation={0}
@@ -27,35 +29,26 @@ const LandingPage = () => {
         xl={9}
         className="centerHorizontally"
       >
-        <Grid item xs={12} md={9} lg={9} className="headerMargin">
-          <Logo width="200px" />
-        </Grid>
+        <Grid item xs={12} md={9} lg={8} className="headerMargin">
+          <div class="spaceBetween centerVertically">
+            <Logo width="200px" />
 
-        <Grid item xs={12} lg={9} className=" spaceBetween sectionMargin">
-          <Grid item xs={12} lg={4}>
-            <LandingPageCard primaryColor="#3494E6" secondaryColor="#EC6EAD" />
-          </Grid>
-          <Hidden mdDown>
-            <LandingPageSvg1 width="60%" />
-          </Hidden>
-        </Grid>
+            <Grid item md={3} lg={3}>
+              <div className="displayFlex spaceBetween">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={goToRegister}
+                >
+                  Sign Up
+                </Button>
 
-        <Grid item xs={12} lg={9} className=" spaceBetween sectionMargin">
-          <Hidden mdDown>
-            <LandingPageSvg2 width="60%" />
-          </Hidden>
-          <Grid item xs={12} lg={4}>
-            <LandingPageCard primaryColor="#FFAFBD" secondaryColor="#FFC3A0" />
-          </Grid>
-        </Grid>
-
-        <Grid item xs={12} lg={9} className=" spaceBetween sectionMargin">
-          <Grid item xs={12} lg={4}>
-            <LandingPageCard primaryColor="#191654" secondaryColor="#43C6AC" />
-          </Grid>
-          <Hidden mdDown>
-            <LandingPageSvg3 width="60%" />
-          </Hidden>
+                <Button color="primary" onClick={goToLogin}>
+                  Login
+                </Button>
+              </div>
+            </Grid>
+          </div>
         </Grid>
       </Grid>
     </Paper>

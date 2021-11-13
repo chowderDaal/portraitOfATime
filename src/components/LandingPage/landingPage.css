@@ -5,13 +5,25 @@
   display: flex;
   justify-content: center;
 }
+
+.LandingPage {
+  height: 100vh;
+}
+
 .LandingPage .centerHorizontally {
   display: flex;
   justify-content: center;
 }
-.LandingPage .disaplyFlex {
+
+.LandingPage .centerVertically {
+  display: flex;
+  align-items: center;
+}
+
+.LandingPage .displayFlex {
   display: flex;
 }
+
 .LandingPage .spaceBetween {
   display: flex;
   justify-content: space-between;

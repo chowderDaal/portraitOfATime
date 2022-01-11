@@ -5,13 +5,30 @@
   display: flex;
   justify-content: center;
 }
+
+.LandingPage {
+  height: 100vh;
+}
+
 .LandingPage .centerHorizontally {
   display: flex;
   justify-content: center;
 }
-.LandingPage .disaplyFlex {
+
+.LandingPage .centerVertically {
+  display: flex;
+  align-items: center;
+}
+
+.LandingPage .align-content-start {
+  display: flex;
+  align-content: flex-start;
+}
+
+.LandingPage .displayFlex {
   display: flex;
 }
+
 .LandingPage .spaceBetween {
   display: flex;
   justify-content: space-between;
@@ -23,4 +40,14 @@
 .LandingPage .headerMargin {
   margin-top: 2%;
   margin-bottom: 6%;
+}
+
+.LandingPage .header {
+  height: 4rem;
+}
+
+.LandingPage .contentBox {
+  height: 30%;
+  background: linear-gradient(45deg, #2f0743, #41295a);
+  border-radius: 4px;
 }
